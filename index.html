@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Thumbnail Download HD - Save YT Video Thumbnails</title>
+
+    <meta name="description"
+        content="Downlaod any youtube video thumbnails images in many different sizes and quality,currently supported formats: YouTube (HD, HQ, 1080p, 4K).">
+    <link rel="canonical" href="https://youtubethumbnaildownloadhd.com/">
+    <meta name="robots" content="index, follow">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+
+
+    <meta property="og:title" content="Youtube Thumbnail Download HD - Save YT Video Thumbnails" />
+    <meta property="og:description"
+        content="Downlaod any youtube video thumbnails images in many different sizes and quality,currently supported formats: YouTube (HD, HQ, 1080p, 4K)." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://youtubethumbnaildownloadhd.com/" />
+    <meta property="og:image" content="/img/og-image.png" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-container">
+            <a href="/">
+                <div class="site-icon">Youtube Thumbnail Download HD</div>
+            </a>
+            <p class="hamburger-icon" onclick="HamburgerClick()">&#9776;</p>
+            <div class="nav-items">
+                <a href="/">
+                    <li class="active">Home</li>
+                </a>
+                <a href="/about.html">
+                    <li>About</li>
+                </a>
+                <a href="/contact.html">
+                    <li>Contact</li>
+                </a>
+                <a href="/privacyPolicy.html">
+                    <li>Privacy Policy</li>
+                </a>
+            </div>
+        </div>
+
+
+        <div id="nav-items-mobile" class="nav-items-mobile hidden">
+            <a href="/">
+                <li class="active">Home</li>
+            </a>
+            <a href="/about.html">
+                <li>About</li>
+            </a>
+            <a href="/contact.html">
+                <li>Contact</li>
+            </a>
+            <a href="/privacyPolicy.html">
+                <li>Privacy Policy</li>
+            </a>
+        </div>
+
+
+
+        <div class="main-container">
+
+            <div class="user-input-wrapper" id="user-input-wrapper">
+                <div class="info">
+                    <p>Download Youtube Thumbnail Images Of All Quality For Free.</p>
+                </div>
+                <input id="user-input" class="input-field" type="text" placeholder="Enter Youtube Video URL Here">
+                <input id="submit-btn" class="submit-btn" type="button" value="Get All Thumbnails Images">
+            </div>
+
+
+            <div id="thumbnail-showcase-container" class="hidden animate__fadeIn">
+
+                <div class="thumbail-container-wrapper">
+                    <div class="thumbnail-showcase">
+                        <img id="main-thumbnail" src="img/thumbnail-placeholder.png" alt="thumbnail-placeholder">
+                    </div>
+                    <div class="thumbnail-actions">
+                        <div class="btn-wrapper">
+                            <li class="list-btn" id="highResBtn" default-attr="High Resolution" data-href=""
+                                download="Image.jpg" onclick="forceDownload(this)">High
+                                Resolution</li>
+                            <span> (1280x720px)</span>
+                        </div>
+                        <div class="btn-wrapper">
+                            <li class="list-btn" id="standardResBtn" default-attr="Standard Quality" data-href=""
+                                download="Image.jpg" onclick="forceDownload(this)">Standard
+                                Quality</li>
+                            <span>(640x480px)</span>
+                        </div>
+                        <div class="btn-wrapper">
+                            <li class="list-btn" id="hdResBtn" default-attr="HD Quality" data-href=""
+                                download="Image.jpg" onclick="forceDownload(this)">HD Quality
+                            </li>
+                            <span>(480x360px)</span>
+                        </div>
+                        <div class="btn-wrapper">
+                            <li class="list-btn" id="mediumResBtn" default-attr="Medium Quality" data-href=""
+                                download="Image.jpg" onclick="forceDownload(this)">Medium
+                                Quality</li>
+                            <span>(320x180px)</span>
+                        </div>
+                        <div class="btn-wrapper">
+
+                            <li class="list-btn" id="defaultResBtn" default-attr="Dafault Quality" data-href=""
+                                download="Image.jpg" onclick="forceDownload(this)">
+                                Dafault Quality</li>
+                            <span>(120x90px)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="thumbnail-previews">
+                    <h3>More Previews</h3>
+                    <div class="thumbail-container-grid-wrapper">
+                        <div class="thumbnail-preview" id="highResPreviewWrapper">
+                            <p>1280x720px</p>
+                            <div class="thumbnail-preview-img-wrapper">
+                                <img id="highResImg" src="img/thumbnail-placeholder.png" alt="thumbnail-placeholder">
+                            </div>
+                            <div class="btn-wrapper">
+                                <li class="list-btn" id="highResBtn2" default-attr="High Resolution" data-href=""
+                                    download="Image.jpg" onclick="forceDownload(this)">High Resolution</li>
+                            </div>
+                        </div>
+                        <div class="thumbnail-preview" id="standardResPreviewWrapper">
+                            <p>640x480px</p>
+                            <div class="thumbnail-preview-img-wrapper">
+                                <img id="standardResImg" src="img/thumbnail-placeholder.png"
+                                    alt="thumbnail-placeholder">
+                            </div>
+                            <div class="btn-wrapper">
+                                <li class="list-btn" id="standardResBtn2" default-attr="Standard Quality" data-href=""
+                                    download="Image.jpg" onclick="forceDownload(this)">Standard Quality</li>
+                            </div>
+                        </div>
+                        <div class="thumbnail-preview" id="hdResPreviewWrapper">
+                            <p>480x360px</p>
+                            <div class="thumbnail-preview-img-wrapper">
+                                <img id="hdResImg" src="img/thumbnail-placeholder.png" alt="thumbnail-placeholder">
+                            </div>
+                            <div class="btn-wrapper">
+                                <li class="list-btn" id="hdResBtn2" default-attr="HD Quality" data-href=""
+                                    download="Image.jpg" onclick="forceDownload(this)">HD Quality</li>
+                            </div>
+                        </div>
+                        <div class="thumbnail-preview" id="mediumResPreviewWrapper">
+                            <p>320x180px</p>
+                            <div class="thumbnail-preview-img-wrapper">
+                                <img id="mediumResImg" src="img/thumbnail-placeholder.png" alt="thumbnail-placeholder">
+                            </div>
+                            <div class="btn-wrapper">
+                                <li class="list-btn" id="mediumResBtn2" default-attr="Medium Quality" data-href=""
+                                    download="Image.jpg" onclick="forceDownload(this)">Medium Quality</li>
+                            </div>
+                        </div>
+                        <div class="thumbnail-preview" id="defaultResPreviewWrapper">
+                            <p>120x90px</p>
+                            <div class="thumbnail-preview-img-wrapper">
+                                <img id="defaultResImg" src="img/thumbnail-placeholder.png" alt="thumbnail-placeholder">
+                            </div>
+                            <div class="btn-wrapper">
+                                <li class="list-btn" id="defaultResBtn2" default-attr="Dafault Quality" data-href=""
+                                    download="Image.jpg" onclick="forceDownload(this)">Dafault Quality</li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        const navItemsMobile = document.getElementById('nav-items-mobile');
+
+        function HamburgerClick() {
+            let isActive = navItemsMobile.classList.contains('hidden');
+            if (isActive) {
+                navItemsMobile.classList.remove('hidden');
+            } else {
+                navItemsMobile.classList.add('hidden');
+            }
+        }
+    </script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
